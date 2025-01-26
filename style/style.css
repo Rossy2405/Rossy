@@ -1,0 +1,20 @@
+/* Configuración para el contenedor del video */
+#bg-video {
+    position: absolute; /* Permite posicionar el video */
+    top: 0;
+    left: 0;
+    width: 100vw; /* El video cubre todo el ancho de la ventana */
+    height: 100vh; /* El video cubre toda la altura de la ventana */
+    object-fit: cover; /* Asegura que el video mantenga sus proporciones */
+    z-index: -1; /* Coloca el video detrás del contenido */
+  }
+  
+  /* Estilo para el contenido encima del video */
+  .content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté encima del video */
+    color: white; /* Contraste para el texto */
+    text-align: center;
+    margin-top: 50vh; /* Centra verticalmente el texto */
+    transform: translateY(-50%);
+  }
