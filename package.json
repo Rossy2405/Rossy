@@ -1,0 +1,26 @@
+{
+  "name": "rossy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "whatch-css": "sass style/scss/style.scss style/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rossy2405/Rossy.git"
+  },
+  "keywords": [
+    "rossy"
+  ],
+  "author": "rossy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rossy2405/Rossy/issues"
+  },
+  "homepage": "https://github.com/Rossy2405/Rossy#readme",
+  "description": "",
+  "dependencies": {
+    "sas": "^3.0.4"
+  }
+}
