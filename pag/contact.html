@@ -10,9 +10,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Maitree:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style/css/style.css">
-    <title>Contact</title>
+    <title>Contacto | Trabaja Conmigo - Rossy Martorell</title>
 </head>
 <body>
+    <nav class="bg-white bg-opacity-40 shadow-lg p-2 w-3/4 mx-auto rounded-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo Icono -->
+            <a href="./index.html" class="flex items-center">
+                <img src="./assets/img/logosinfondo.png" alt="Inicio" class="w-16 h-16 mr-2">
+                
+            </a>
+      
+            <!-- Botón Menú Hamburguesa -->
+            <button id="menu-toggle" class="lg:hidden text-frankin-600 focus:outline-none">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+    
+            <!-- Menú -->
+            <ul id="menu" class="hidden lg:flex space-x-6 text-gray-700">
+                <li><a href="../index.html" class="hover:text-blue-600">Inicio</a></li>
+                <li><a href="profile.html" class="hover:text-blue-600">Sobre Mí</a></li>
+                <li><a href="skills.html" class="hover:text-blue-600">Habilidades</a></li>
+                <li><a href="gallery.html" class="hover:text-blue-600">Portafolio</a></li>
+                <li><a href="testimonial.html" class="hover:text-blue-600">Testimonios</a></li>
+                <li>
+                    <a href="pag/contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contacto</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden lg:hidden flex flex-col space-y-4 p-4 bg-white shadow-lg">
+            <a href="#" class="text-gray-700 hover:text-blue-600">Inicio</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600">Sobre Mí</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600">Habilidades</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600">Portafolio</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600">Testimonios</a>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contacto</a>
+        </div>
+    </nav>
+    
     <div class="contact-form-container">
         <h2>Contacto</h2>
         <form class="contact-form">
