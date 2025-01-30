@@ -1,5 +1,19 @@
+@use 'resets';
+@use 'funciones';
+@use 'skills';
+@use 'testimonial';
+@use 'contact';
+@use 'profile';
+@use 'componentes';
+@use 'variables' as *;
+body {
+  background: $colorbackground;
+};
 
 
-h1{
-    color: blue
-}
+
+
+
+
+
+  

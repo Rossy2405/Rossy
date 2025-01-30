@@ -1,5 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  font: inherit;
+}
+
+img, video {
+  max-width: 100%;
+  display: inline-block;
+}
+
 h1 {
-  color: blue;
+  color: #C5D1F8;
+}
+
+h2 {
+  color: #FFFFFF;
+}
+
+p {
+  color: #DCFCF7;
+}
+
+body {
+  background-color: #030020;
+  font-family: "Franklin Gothic Medium";
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a2e;
+  color: #eaeaea;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1, h2 {
+  color: #00aaff;
+}
+
+.skills-section {
+  background: #16213e;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 170, 255, 0.3);
+}
+
+.highlight {
+  color: #00aaff;
+  font-weight: bold;
+}
+
+.testimonials-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #16213e;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+  color: white;
+}
+
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: #0f3460;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.2);
+  display: flex;
+  align-items: center;
+  width: 300px;
+  text-align: left;
+}
+
+.testimonial-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 3px solid #00aaff;
+}
+
+.testimonial-content {
+  flex: 1;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  color: #00aaff;
+}
+
+.contact-form-container {
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+  margin-top: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.contact-form button {
+  background: #00aaff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #01b7e0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a2e;
+  color: #eaeaea;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1, h2 {
+  color: #00aaff;
+}
+
+.profile-section {
+  background: #16213e;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+}
+
+.profile-img {
+  max-width: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+  border: 3px solid #00aaff;
+}
+
+a {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  background: #030020;
 }
 
 /*# sourceMappingURL=style.css.map */
