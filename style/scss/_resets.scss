@@ -3,6 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+#miCanvas {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: -1 !important;
+    background-color: #030020 !important;
+}
+
+
 a{
     color: inherit;
     font: inherit;
@@ -22,7 +33,7 @@ p{
 }
 body{
 
-    background-color: #030020;
+    background-color: transparent;
     font-family: 'Franklin Gothic Medium';
     
 
