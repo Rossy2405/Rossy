@@ -1,3 +1,61 @@
+/* Ajustes específicos para el menú */
+nav {
+    width: 100%; /* Asegura que el nav ocupe todo el ancho */
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    padding: 10px 0;
+    position: fixed; /* Fija el nav arriba */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Contenedor del nav */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos del ul */
+#menu {
+    display: flex; /* Lo hace horizontal */
+    flex-direction: row; /* Asegura que los elementos estén en fila */
+    list-style: none;
+    gap: 20px; /* Espaciado entre elementos */
+}
+
+/* Ocultar el menú en móviles y mostrar con el botón */
+#menu.hidden {
+    display: none; /* Se oculta por defecto */
+}
+
+/* Ajustes para el botón del menú hamburguesa */
+#menu-toggle {
+    display: none; /* Ocultamos el botón en escritorio */
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 1024px) {
+    #menu {
+        flex-direction: column; /* En móviles, el menú será vertical */
+        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 10px 0;
+    }
+
+    #menu-toggle {
+        display: block; /* El botón aparece en móviles */
+    }
+}
+
+
 .testimonials-container {
     text-align: center;
     padding: 40px;
@@ -9,7 +67,7 @@
 .testimonials {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: inline;
     gap: 20px;
 }
 .testimonial-card {
@@ -18,7 +76,7 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 170, 255, 0.2);
     display: flex;
-    align-items: center;
+    align-items: inline;
     width: 300px;
     text-align: left;
 }
