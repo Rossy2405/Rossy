@@ -11,73 +11,93 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Maitree:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script> document.addEventListener("DOMContentLoaded", () => {
-        gsap.from("header", { duration: 1, y: -50, opacity: 0, ease: "power3.out" });
-    
-        gsap.from("h1", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 0.5 });
-    
-        gsap.utils.toArray("section div").forEach((box, i) => {
-            gsap.from(box, {
-                duration: 1,
-                opacity: 0,
-                y: 50,
-                delay: i * 0.2 + 0.5,
-                ease: "power3.out",
-            });
-        });
-    
-        document.querySelectorAll("nav a").forEach((link) => {
-            link.addEventListener("mouseover", () => {
-                gsap.to(link, { duration: 0.3, color: "#00FFFF" });
-            });
-            link.addEventListener("mouseleave", () => {
-                gsap.to(link, { duration: 0.3, color: "#ffffff" });
-            });
-        });
-    });
-    </script>
     <link rel="stylesheet" href="../style/css/style.css">
-    <title>Mis Habilidades | Diseño Gráfico & Desarrollo Web - Rossy Martorell </title>
+    <title>Mis Habilidades | Diseño Gráfico & Desarrollo Web - Rossy Martorell</title>
+    <style>
+        body {
+            background-image: url(/assets/img/fondoskill.jpg);
+            
+            color: #ffffff; /* Color de texto */
+            font-family: 'Libre Franklin', sans-serif;
+            padding-top: 0px; /* Espacio para el navbar fijo */
+        }
+
+        header {
+            position: top;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            backdrop-filter: blur(10px); /* Efecto Glassmorphism */
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <!-- Navbar -->
-        <nav class="bg-white bg-opacity-5 shadow-lg  w-full  top-0 left-0 z-50">
+        <nav class="bg-white bg-opacity-5 shadow-lg w-full top-0 left-0 z-50">
             <div class="container mx-auto flex justify-between items-center h-14">
-            <!-- Logo -->
-            <a href="../index.html" class="flex items-center">
-                <img src="../assets/img/logosinfondo.png" alt="Inicio" class="w-14 h-14">
-            </a>
-      
-        
-            <ul id="menu" class="hidden lg:flex space-x-6 text-gray-400">
-                <li><a href="../index.html" class="hover:text-blue-600">Inicio</a></li>
-                <li><a href="profile.html" class="hover:text-blue-600">Sobre Mí</a></li>
-                <li><a href="skills.html" class="hover:text-blue-600">Habilidades</a></li>
-                <li><a href="gallery.html" class="hover:text-blue-600">Portafolio</a></li>
-                <li><a href="testimonial.html" class="hover:text-blue-600">Testimonios</a></li>
-                <li><a href="./contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contacto</a></li>
-        
-    
-            </ul>
+                <a href="../index.html" class="flex items-center">
+                    <img src="../assets/img/logosinfondo.png" alt="Inicio" class="w-14 h-14">
+                </a>
+                <ul id="menu" class="hidden lg:flex space-x-6 text-gray-400">
+                    <li><a href="../index.html" class="hover:text-blue-600">Inicio</a></li>
+                    <li><a href="profile.html" class="hover:text-blue-600">Sobre Mí</a></li>
+                    <li><a href="skills.html" class="hover:text-blue-600">Habilidades</a></li>
+                    <li><a href="gallery.html" class="hover:text-blue-600">Portafolio</a></li>
+                    <li><a href="testimonial.html" class="hover:text-blue-600">Testimonios</a></li>
+                    <li><a href="./contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contacto</a></li>
+                </ul>
             </div>
         </nav>
     </header>
     
     <main class="container mx-auto px-4 mt-10">
-        <h1 class="text-4xl font-bold text-center text-white mb-8 animate-fade-in">Mis Habilidades</h1>
+        <h1 class="text-4xl font-bold text-center mb-8">Mis Habilidades</h1>
     
         <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
             <!-- Diseño Gráfico -->
-            <div class="bg-opacity-10 p-6 rounded-lg shadow-lg backdrop-blur-lg border border-gray-700">
+            <div class="skill-card">
                 <h2 class="text-2xl font-semibold text-blue-400 mb-4">🎨 Diseño Gráfico</h2>
                 <ul class="space-y-2">
                     <li class="flex items-center"><span class="text-blue-300">✔ Branding & Identidad Visual</span></li>
@@ -87,7 +107,7 @@
             </div>
     
             <!-- Desarrollo Web -->
-            <div class="bg-opacity-10 p-6 rounded-lg shadow-lg backdrop-blur-lg border border-gray-700 glassconteiner">
+            <div class="skill-card">
                 <h2 class="text-2xl font-semibold text-green-400 mb-4">💻 Desarrollo Web</h2>
                 <ul class="space-y-2">
                     <li class="flex items-center"><span class="text-green-300">✔ Frontend (HTML, CSS, JS, Vue.js, React)</span></li>
@@ -97,7 +117,7 @@
             </div>
     
             <!-- UX/UI -->
-            <div class="bg-opacity-10 p-6 rounded-lg shadow-lg backdrop-blur-lg border border-gray-700">
+            <div class="skill-card">
                 <h2 class="text-2xl font-semibold text-yellow-400 mb-4">🎭 UX/UI</h2>
                 <ul class="space-y-2">
                     <li class="flex items-center"><span class="text-yellow-300">✔ Diseño Centrado en el Usuario</span></li>
@@ -107,7 +127,7 @@
             </div>
     
             <!-- Edición de Video -->
-            <div class="bg-opacity-10 p-6 rounded-lg shadow-lg backdrop-blur-lg border border-gray-700">
+            <div class="skill-card">
                 <h2 class="text-2xl font-semibold text-red-400 mb-4">📹 Edición de Video</h2>
                 <ul class="space-y-2">
                     <li class="flex items-center"><span class="text-red-300">✔ Montaje y Postproducción</span></li>
@@ -115,13 +135,37 @@
                     <li class="flex items-center"><span class="text-red-300">✔ Contenido para Redes</span></li>
                 </ul>
             </div>
-    
         </section>
     </main>
     
-    <footer class="absolut button text-center ">
-        © 2025 Rossy Martorell - Todos los derechos reservados. Agradezco a mis profes German & Santi, por su paciencia y conocimientos transmitidos. 
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>© 2025 Rossy Martorell - Todos los derechos reservados. Agradezco a mis profes German & Santi, por su paciencia y conocimientos transmitidos.</p>
     </footer>
-       
+    
+    <script>
+        // Animaciones de entrada
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.from("header", { duration: 1, y: -50, opacity: 0, ease: "power3.out" });
+            gsap.from("h1", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 0.5 });
+            gsap.utils.toArray("section .skill-card").forEach((box, i) => {
+                gsap.from(box, {
+                    duration: 1,
+                    opacity: 0,
+                    y: 50,
+                    delay: i * 0.2 + 0.5,
+                    ease: "power3.out",
+                });
+            });
+            document.querySelectorAll("nav a").forEach((link) => {
+                link.addEventListener("mouseover", () => {
+                    gsap.to(link, { duration: 0.3, color: "#00FFFF" });
+                });
+                link.addEventListener("mouseleave", () => {
+                    gsap.to(link, { duration: 0.3, color: "#ffffff" });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
+
