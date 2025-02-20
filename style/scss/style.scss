@@ -5,6 +5,7 @@
 @use 'contact';
 @use 'profile';
 @use 'componentes';
+@use 'gallery';
 @use 'variables' as *;
 body {
   background: $colorbackground;

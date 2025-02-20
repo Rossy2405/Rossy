@@ -1,44 +1,16 @@
-
-body {
-    background-color: var(--color-background);
-    color: var(--color-terciario);
-    font-family: var(--font-family);
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-header {
-    padding: 20px;
-    background: var(--color-primario);
-    color: var(--color-background);
-}
-
-.portfolio {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px;
-    flex-wrap: wrap;
-}
-
-.project {
-    background: var(--color-secundario);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.project:hover {
-    transform: translateY(-10px);
-}
-
-img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-}
-.fotoproyecto {
-    height: 2%;
-  }
+ body {
+     background-color: #030020 !important;  /* Fondo oscuro */
+            
+    }
+#background-svg {
+    
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Asegúrate de que esté detrás del contenido */
+        }
+.circle {
+            opacity: 0.5; /* Opacidad de los círculos */
+        }

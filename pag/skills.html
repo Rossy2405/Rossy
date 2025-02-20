@@ -18,6 +18,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script> document.addEventListener("DOMContentLoaded", () => {
+        gsap.from("header", { duration: 1, y: -50, opacity: 0, ease: "power3.out" });
+    
+        gsap.from("h1", { duration: 1, opacity: 0, scale: 0.8, ease: "back.out(1.7)", delay: 0.5 });
+    
+        gsap.utils.toArray("section div").forEach((box, i) => {
+            gsap.from(box, {
+                duration: 1,
+                opacity: 0,
+                y: 50,
+                delay: i * 0.2 + 0.5,
+                ease: "power3.out",
+            });
+        });
+    
+        document.querySelectorAll("nav a").forEach((link) => {
+            link.addEventListener("mouseover", () => {
+                gsap.to(link, { duration: 0.3, color: "#00FFFF" });
+            });
+            link.addEventListener("mouseleave", () => {
+                gsap.to(link, { duration: 0.3, color: "#ffffff" });
+            });
+        });
+    });
+    </script>
     <link rel="stylesheet" href="../style/css/style.css">
     <title>Mis Habilidades | Diseño Gráfico & Desarrollo Web - Rossy Martorell </title>
 </head>
@@ -46,50 +71,57 @@
         </nav>
     </header>
     
-    <main>
-        <div class="container">
-            <h1>Mis Habilidades</h1>
+    <main class="container mx-auto px-4 mt-10">
+        <h1 class="text-4xl font-bold text-center text-white mb-8 animate-fade-in">Mis Habilidades</h1>
+    
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <div class="skills-section">
-                <h2>🎨 Diseño Gráfico</h2>
-                <ul>
-                    <li><span class="highlight">Branding & Identidad Visual</span>: Creación de logotipos y estilos visuales únicos.</li>
-                    <li><span class="highlight">Diseño Editorial</span>: Revistas, catálogos y libros con estética profesional.</li>
-                    <li><span class="highlight">Publicidad Digital & Impresa</span>: Banners, flyers y contenido visual atractivo.</li>
+            <!-- Diseño Gráfico -->
+            <div class="bg-opacity-10 p-6 rounded-lg shadow-lg backdrop-blur-lg border border-gray-700">
+                <h2 class="text-2xl font-semibold text-blue-400 mb-4">🎨 Diseño Gráfico</h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center"><span class="text-blue-300">✔ Branding & Identidad Visual</span></li>
+                    <li class="flex items-center"><span class="text-blue-300">✔ Diseño Editorial</span></li>
+                    <li class="flex items-center"><span class="text-blue-300">✔ Publicidad Digital & Impresa</span></li>
                 </ul>
             </div>
-            
-            <div class="skills-section">
-                <h2>💻 Desarrollo Web</h2>
-                <ul>
-                    <li><span class="highlight">Frontend</span>: HTML, CSS, JavaScript, Vue.js, React.</li>
-                    <li><span class="highlight">Backend</span>: PHP, MySQL, Node.js.</li>
-                    <li><span class="highlight">WordPress & CMS</span>: Creación y personalización de sitios web dinámicos.</li>
+    
+            <!-- Desarrollo Web -->
+            <div class="bg-opacity-10 p-6 rounded-lg shadow-lg backdrop-blur-lg border border-gray-700 glassconteiner">
+                <h2 class="text-2xl font-semibold text-green-400 mb-4">💻 Desarrollo Web</h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center"><span class="text-green-300">✔ Frontend (HTML, CSS, JS, Vue.js, React)</span></li>
+                    <li class="flex items-center"><span class="text-green-300">✔ Backend (PHP, MySQL, Node.js)</span></li>
+                    <li class="flex items-center"><span class="text-green-300">✔ WordPress & CMS</span></li>
                 </ul>
             </div>
-            
-            <div class="skills-section">
-                <h2>🎭 UX/UI</h2>
-                <ul>
-                    <li><span class="highlight">Diseño Centrado en el Usuario</span>: Creación de interfaces intuitivas y atractivas.</li>
-                    <li><span class="highlight">Wireframing & Prototipado</span>: Uso de Figma y Adobe XD.</li>
-                    <li><span class="highlight">Optimización de Experiencia</span>: Testeo y mejoras de usabilidad.</li>
+    
+            <!-- UX/UI -->
+            <div class="bg-opacity-10 p-6 rounded-lg shadow-lg backdrop-blur-lg border border-gray-700">
+                <h2 class="text-2xl font-semibold text-yellow-400 mb-4">🎭 UX/UI</h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center"><span class="text-yellow-300">✔ Diseño Centrado en el Usuario</span></li>
+                    <li class="flex items-center"><span class="text-yellow-300">✔ Wireframing & Prototipado (Figma, Adobe XD)</span></li>
+                    <li class="flex items-center"><span class="text-yellow-300">✔ Optimización de Experiencia</span></li>
                 </ul>
             </div>
-            
-            <div class="skills-section">
-                <h2>📹 Edición de Video</h2>
-                <ul>
-                    <li><span class="highlight">Montaje y Postproducción</span>: Edición profesional con Premiere Pro y After Effects.</li>
-                    <li><span class="highlight">Animaciones</span>: Motion graphics impactantes.</li>
-                    <li><span class="highlight">Contenido para Redes</span>: Videos optimizados para plataformas digitales.</li>
+    
+            <!-- Edición de Video -->
+            <div class="bg-opacity-10 p-6 rounded-lg shadow-lg backdrop-blur-lg border border-gray-700">
+                <h2 class="text-2xl font-semibold text-red-400 mb-4">📹 Edición de Video</h2>
+                <ul class="space-y-2">
+                    <li class="flex items-center"><span class="text-red-300">✔ Montaje y Postproducción</span></li>
+                    <li class="flex items-center"><span class="text-red-300">✔ Animaciones y Motion Graphics</span></li>
+                    <li class="flex items-center"><span class="text-red-300">✔ Contenido para Redes</span></li>
                 </ul>
             </div>
-        </div>
+    
+        </section>
     </main>
     
     <footer class="absolut button text-center ">
         © 2025 Rossy Martorell - Todos los derechos reservados. Agradezco a mis profes German & Santi, por su paciencia y conocimientos transmitidos. 
-    </footer>    
+    </footer>
+       
 </body>
 </html>

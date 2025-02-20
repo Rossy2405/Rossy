@@ -12,73 +12,139 @@
     <meta property="og:url" content="URL_DE_TU_PORTAFOLIO">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Maitree:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../style/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <!-- Navbar -->
-        <nav class="bg-white bg-opacity-5 shadow-lg  w-full  top-0 left-0 z-50">
-            <div class="container mx-auto flex justify-between items-center h-14">
-            <!-- Logo -->
-            <a href="../index.html" class="flex items-center">
-                <img src="../assets/img/logosinfondo.png" alt="Inicio" class="w-14 h-14">
-            </a>
-      
-        
-            <ul id="menu" class="hidden lg:flex space-x-6 text-gray-400">
-                <li><a href="../index.html" class="hover:text-blue-600">Inicio</a></li>
-                <li><a href="profile.html" class="hover:text-blue-600">Sobre Mí</a></li>
-                <li><a href="skills.html" class="hover:text-blue-600">Habilidades</a></li>
-                <li><a href="gallery.html" class="hover:text-blue-600">Portafolio</a></li>
-                <li><a href="testimonial.html" class="hover:text-blue-600">Testimonios</a></li>
-                <li><a href="./contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contacto</a></li>
-        
+    <title>Portafolio de Rossy Martorell</title>
     
-            </ul>
+</head>
+<body class="bg-gray-100 font-sans">
+    <svg id="background-svg" class="absolute top-0 left-0 w-full h-full" viewBox="0 0 100 100">
+        <circle class="circle" cx="50" cy="50" r="5" fill="rgba(0, 0, 255, 0.5)" />
+        <circle class="circle" cx="30" cy="30" r="8" fill="rgba(0, 0, 200, 0.5)" />
+        <circle class="circle" cx="70" cy="70" r="12" fill="rgba(0, 0, 150, 0.5)" />
+        <circle class="circle" cx="20" cy="80" r="6" fill="rgba(0, 0, 180, 0.5)" />
+        <circle class="circle" cx="80" cy="20" r="10" fill="rgba(0, 0, 220, 0.5)" />
+        <circle class="circle" cx="50" cy="50" r="5" fill="rgba(0, 0, 255, 0.5)" />
+        <circle class="circle" cx="30" cy="30" r="8" fill="rgba(0, 0, 200, 0.5)" />
+        <circle class="circle" cx="70" cy="70" r="12" fill="rgba(0, 0, 150, 0.5)" />
+        <circle class="circle" cx="20" cy="80" r="6" fill="rgba(0, 0, 180, 0.5)" />
+        <circle class="circle" cx="80" cy="20" r="10" fill="rgba(0, 0, 220, 0.5)" />
+        
+    </svg>
+
+    <header>
+        <nav class="bg-darkblue bg-opacity-5 shadow-lg w-full fixed top-0 left-0 z-50">
+            <div class="container mx-auto flex justify-between items-center h-16 px-4">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../assets/img/logosinfondo.png" alt="Inicio" class="w-14 h-14">
+                </a>
+                <ul id="menu" class="lg:flex space-x-6 text-gray-400">
+                    <li><a href="../index.html" class="hover:text-blue-600">Inicio</a></li>
+                    <li><a href="profile.html" class="hover:text-blue-600">Sobre Mí</a></li>
+                    <li><a href="skills.html" class="hover:text-blue-600">Habilidades</a></li>
+                    <li><a href="gallery.html" class="hover:text-blue-600">Portafolio</a></li>
+                    <li><a href="testimonial.html" class="hover:text-blue-600">Testimonios</a></li>
+                    <li><a href="./contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contacto</a></li>
+                </ul>
             </div>
         </nav>
     </header>
-    <main>
-        <div class="carousel">
-            <div class="carousel-images">
-                <img src="image1.jpg" alt="Imagen 1">
-                <img src="image2.jpg" alt="Imagen 2">
-                <img src="image3.jpg" alt="Imagen 3">
-                <img src="image4.jpg" alt="Imagen 4">
-                <img src="image5.jpg" alt="Imagen 5">
-            </div>
-        </div>
 
+    <main class="pt-20 relative z-10">
+        <!-- Carrusel -->
+        <section class="carousel mb-10">
+            <div class="container mx-auto px-4">
+                <h1 class="text-3xl font-bold text-center mb-8 text-white">Mis Trabajos</h1>
+                <div class="flex justify-between p-4">
+                    <div class="relative w-1/3">
+                        <img src="/assets/img/fondoportada.jpg" alt="imagen de portada para categoria: videos" class="w-full h-48 object-cover rounded-lg">
+                        <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                            <h2 class="text-white text-xl">Videos</h2>
+                        </div>
+                    </div>
+                    <div class="relative w-1/3">
+                        <img src="/assets/img/fondoportada.jpg" alt="imagen de portada para categoria: tarjetas" class="w-full h-48 object-cover rounded-lg">
+                        <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                            <h2 class="text-white text-xl">Tarjetas</h2>
+                        </div>
+                    </div>
+                    <div class="relative w-1/3">
+                        <img src="/assets/img/fondoportada.jpg" alt="imagen de portada para categoria: curriculums" class="w-full h-48 object-cover rounded-lg">
+                        <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                            <h2 class="text-white text-xl">Curriculums</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ejemplos de Trabajos -->
+        <section class="portfolio container mx-auto px-4">
+            <h1 class="text-3xl font-bold text-center mb-8 text-white">Ejemplos de Mis Trabajos</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="project bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img class="fotoproyecto w-full h-48 object-cover" src="../assets/img/15.png" alt="Tarjeta de invitación 15 años">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Tarjeta de Invitación para Cumpleaños</h2>
+                        <p class="text-gray-600">Diseño de la tarjeta tanto física como virtual para los 15 años de mi clienta.</p>
+                        <a href="https://radiofes.my.canva.site/mis15desk" class="text-blue-600 hover:underline">Entra a ver con Vista Celular</a>
+                    </div>
+                </div>
+                <div class="project bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/assets/img/cv Adriana.png" alt="Curriculum vitae de Adriana" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Curriculum vitae de Adriana</h2>
+                        <p class="text-gray-600">Diseño y desarrollo de CV con palabras clave y estrategias para un mayor porcentaje de empleabilidad.</p>
+                    </div>
+                </div>
+                <div class="project bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="/assets/img/casamiento flor y pablo.png" alt="Invitación boda virtual" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-xl font-semibold">Invitación Boda Virtual para Desk</h2>
+                        <p class="text-gray-600">Realicé una invitación a la boda de Flor y Pablo, la cual quedaron fascinados con ella. Ven a verla...</p>
+                        <a href="https://radiofes.my.canva.site/nos-casamos-flor-y-pablo" class="text-blue-600 hover:underline">Ingresa aquí</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <section class="portfolio">
-        <div class="project">
-            <img class= "fotoproyecto" src="../assets/img/15.png" alt="tarjeta de invitacion mis 15 años ">
-            <h2>tarjeta de invitacion para cumple de 15 años</h2>
-            <p>Diseño de la tarjta tanto fisica como virtual para los 15 años de mi clienta.</p>
-            <a href="" ></a>
-        </div>
-        <div class="project">
-            <img src="web_example.jpg" alt="Ejemplo de desarrollo web">
-            <h2>Landing Page</h2>
-            <p>Diseño y desarrollo de una web moderna con UX/UI optimizado.</p>
-        </div>
-        <div class="project">
-            <img src="app_example.jpg" alt="Ejemplo de UI/UX">
-            <h2>App UI/UX</h2>
-            <p>Prototipo interactivo para una aplicación móvil.</p>
-        </div>
-    </section>
-    
-    <footer class="absolut button text-center ">
-        © 2025 Rossy Martorell - Todos los derechos reservados. Agradezco a mis profes German & Santi, por su paciencia y conocimientos transmitidos. 
-</footer>
+
+    <footer class="absolut bg-gray-800 text-white text-center py-4">
+        <p>© 2025 Rossy Martorell - Todos los derechos reservados. Agradezco a mis profes German & Santi, por su paciencia y conocimientos transmitidos.</p>
+    </footer>
+
+    <script>
+        // Selecciona todos los círculos
+        const circles = document.querySelectorAll('.circle');
+
+        // Función para animar los círculos
+        function animateCircles() {
+            circles.forEach(circle => {
+                // Genera valores aleatorios para la animación
+                const randomX = Math.random() * 100;
+                const randomY = Math.random() * 100;
+                const randomScale = 0.5 + Math.random() * 0.5; // Escala entre 0.5 y 1.0
+                const randomDuration = 5 + Math.random() * 5; // Duración entre 5 y 10 segundos
+
+                // Anima cada círculo
+                gsap.to(circle, {
+                    duration: randomDuration,
+                    x: randomX,
+                    y: randomY,
+                    scale: randomScale,
+                    rotation: Math.random() * 360,
+                    ease: "power1.inOut",
+                    repeat: -1,
+                    yoyo: true,
+                    onComplete: animateCircles // Llama a la función de nuevo al completar
+                });
+            });
+        }
+
+        // Inicia la animación
+        animateCircles();
+    </script>
 </body>
 </html>

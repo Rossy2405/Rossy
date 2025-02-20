@@ -7,31 +7,43 @@ body {
     color: #eaeaea;
     text-align: center;
 }
+
 .container {
     max-width: 900px;
     margin: auto;
     padding: 40px 20px;
 }
+
+/* Tarjetas */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    }
+}
+
 h1, h2 {
     color: #00aaff;
 }
-.skills-section {
-    background: #16213e;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+
+/* Animación personalizada */
+@keyframes glitch {
+    0% { text-shadow: 2px 2px #00ffff, -2px -2px #ff00ff; }
+    50% { text-shadow: -2px -2px #00ffff, 2px 2px #ff00ff; }
+    100% { text-shadow: 2px -2px #00ffff, -2px 2px #ff00ff; }
 }
-ul {
-    list-style: none;
-    padding: 0;
+
+h1 {
+    animation: glitch 0.5s infinite alternate;
 }
-li {
-    font-size: 18px;
-    padding: 10px;
-    border-bottom: 1px solid rgba(0, 170, 255, 0.3);
-}
-.highlight {
-    color: #00aaff;
-    font-weight: bold;
-}
+
+
