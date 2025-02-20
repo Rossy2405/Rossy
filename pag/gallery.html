@@ -16,25 +16,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Maitree:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CustomEase.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../style/css/style.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <nav class="bg-white bg-opacity-40 shadow-lg ">
-            <ul id="menu" class="   text-gray-400">
+        <!-- Navbar -->
+        <nav class="bg-white bg-opacity-5 shadow-lg  w-full  top-0 left-0 z-50">
+            <div class="container mx-auto flex justify-between items-center h-14">
+            <!-- Logo -->
+            <a href="../index.html" class="flex items-center">
+                <img src="../assets/img/logosinfondo.png" alt="Inicio" class="w-14 h-14">
+            </a>
+      
+        
+            <ul id="menu" class="hidden lg:flex space-x-6 text-gray-400">
                 <li><a href="../index.html" class="hover:text-blue-600">Inicio</a></li>
                 <li><a href="profile.html" class="hover:text-blue-600">Sobre Mí</a></li>
                 <li><a href="skills.html" class="hover:text-blue-600">Habilidades</a></li>
                 <li><a href="gallery.html" class="hover:text-blue-600">Portafolio</a></li>
                 <li><a href="testimonial.html" class="hover:text-blue-600">Testimonios</a></li>
-                <li>
-                    <a href="contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contacto</a>
-                </li>
+                <li><a href="./contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contacto</a></li>
+        
+    
             </ul>
-        </div>
+            </div>
         </nav>
-
     </header>
     <main>
         <div class="carousel">
