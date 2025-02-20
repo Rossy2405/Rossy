@@ -5,10 +5,12 @@
 }
 body {
   margin: 0;
-  overflow: hidden;
+  
   background: #020c1b; /* Color oscuro para resaltar las partículas */
 }
-
+.rossy{
+  height: 50%;
+}
 canvas {
   position: fixed;
   top: 0;
@@ -29,7 +31,7 @@ img, video {
 }
 
 h1 {
-  color: #C5D1F8;
+  color: colorprimario;
 }
 
 h2 {
