@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Rossy Martorell, diseñadora gráfica y desarrolladora web. Descubre mis proyectos y habilidades en diseño digital y desarrollo front-end.">
+    <meta name="keywords" content="diseño gráfico, desarrollo web, UX/UI, frontend, Rossy Martorell, diseño digital, Portafolio, linkedin">
+    <meta property="og:title" content="portafolio Rossy Martorell">
+    <meta property="og:site_name" content="Rossy Portafolio ">
+    <meta property="og:url" content="rossy-seven.vercel.app">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="file:///C:/Users/CARLOS/Downloads/rossy%20imagen.webp">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -19,12 +28,16 @@
     
 </head>
 <body>
-  <canvas id="canvas"></canvas>
+    <header>
+        <canvas id="canvas"></canvas>
 
   
-<!-- Navbar -->
-<nav class="bg-white bg-opacity-5 shadow-lg  w-full  top-0 left-0 z-50">
-    <div class="container mx-auto flex justify-between items-center h-14">
+
+
+    </nav>
+        <!-- Navbar -->
+        <nav class="bg-white bg-opacity-5 shadow-lg  w-full  top-0 left-0 z-50">
+        <div class="container mx-auto flex justify-between items-center h-14">
         <!-- Logo -->
         <a href="./index.html" class="flex items-center">
             <img src="./assets/img/logosinfondo.png" alt="Inicio" class="w-14 h-14">
@@ -42,23 +55,27 @@
                 <a href="pag/contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contacto</a>
             </li>
         </ul>
-    </div>
+        </div>
     
     
-</nav>
+        </nav>
 
+    </header>
+  
+    <main>
+        <!-- Contenido -->
+        <div class="content pt-20 flex flex-col items-center justify-center h-screen">
+            <h1 class="text-2xl text-gray-600">Alquimista digital </h1>
+            <img class="rossy" src="./assets/img/rossymetal.png" alt="palabra rossy con un diseño de letra con brillo metal">
+            <h2 class="text-1xl text-gray-600">Diseño Gráfico-Desarrollo web-UX/UI</h2>
+        </div>
 
+    </main>
 
-  <!-- Contenido -->
-<div class="content pt-20 flex flex-col items-center justify-center h-screen">
-    <h1 class="text-2xl text-gray-600">Alquimista digital </h1>
-    <img class="rossy" src="./assets/img/rossymetal.png" alt="rossymetal">
-    <h2 class="text-1xl text-gray-600">Diseño Gráfico-Desarrollo web-UX/UI</h2>
-  </div>
-
-<footer class="absolut button text-center ">
-    © 2025 Rossy Martorell - Todos los derechos reservados.
-</footer>
+ 
+    <footer class="absolut button text-center ">
+        © 2025 Rossy Martorell - Todos los derechos reservados. Agradezco a mis profes German & Santi, por su paciencia y conocimientos transmitidos. 
+    </footer>
 
   <script>
     // Funcionalidad del menú hamburguesa
@@ -82,7 +99,7 @@
     const ctx = canvas.getContext("2d");
 
     let particles = [];
-    const numParticles = 100;
+    const numParticles = 1000;
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;

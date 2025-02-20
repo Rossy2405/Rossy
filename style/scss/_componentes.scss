@@ -1,0 +1,28 @@
+.header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 1.3rem 10%;
+background: red;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 100;
+
+}
+
+.logo {
+    font-size: 2rem;
+    color: colorsecundario; 
+    text-decoration: none;
+    font-weight: 700;
+
+}
+.navbar a {
+    font-size: 1.15rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
