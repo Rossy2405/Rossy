@@ -1,5 +1,50 @@
-@media (max-width: 600px) {
-    .item {
-        flex: 1 1 calc(50% - 10px);
+
+// Estilos generales
+body {
+    background-color: $primary-color; /* Fondo oscuro */
+    font-family: 'Libre Franklin', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+// Estilos para el contenedor principal
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+// Media Queries
+@media (max-width: 1080px) {
+    h1 {
+        font-size: 2.5rem; // Tamaño de fuente más pequeño para pantallas más pequeñas
+    }
+
+    .profile-section {
+        padding: 15px; // Reduce el padding en pantallas más pequeñas
+    }
+
+    .skill-card {
+        margin-bottom: 15px; // Reduce el margen entre tarjetas
     }
 }
+
+@media (max-width: 300px) {
+    h1 {
+        font-size: 1.8rem; // Tamaño de fuente aún más pequeño
+    }
+
+    .profile-section {
+        padding: 10px; // Reduce aún más el padding
+    }
+
+    .skill-card {
+        margin-bottom: 10px; // Reduce el margen entre tarjetas
+    }
+
+    .profile-img {
+        width: 100px; // Reduce el tamaño de la imagen de perfil
+        height: 100px; // Reduce el tamaño de la imagen de perfil
+    }
+}
+
