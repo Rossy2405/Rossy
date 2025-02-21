@@ -1,6 +1,6 @@
 @use 'resets';
 @use 'mediarueris'; 
-@use 'menu';
+
 @use 'funciones';
 @use 'skills';
 @use 'testimonial';
@@ -8,6 +8,7 @@
 @use 'profile';
 @use 'componentes';
 @use 'gallery';
+@use 'menu';
 @use 'variables' as *;
 body {
   background: $colorbackground;

@@ -36,6 +36,11 @@ body {
 
 /* Media query para pantallas más pequeñas */
 @media (max-width: 1080px) {
+.rossy {
+        height: 20%auto;
+        left: 20px;
+        right: 20px;
+    }
     .menu-toggle {
         display: none; /* Muestra el botón de menú hamburguesa en pantallas pequeñas */
     }

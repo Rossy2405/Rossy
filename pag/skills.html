@@ -75,22 +75,44 @@
 </head>
 <body>
     <header>
+        <!-- Navbar -->
         <nav class="bg-white bg-opacity-5 shadow-lg w-full top-0 left-0 z-50">
-            <div class="container mx-auto flex justify-between items-center h-14">
-                <a href="../index.html" class="flex items-center">
-                    <img src="../assets/img/logosinfondo.png" alt="Inicio" class="w-14 h-14">
-                </a>
-                <ul id="menu" class="hidden lg:flex space-x-6 text-gray-400">
-                    <li><a href="../index.html" class="hover:text-blue-600">Inicio</a></li>
-                    <li><a href="profile.html" class="hover:text-blue-600">Sobre Mí</a></li>
-                    <li><a href="skills.html" class="hover:text-blue-600">Habilidades</a></li>
-                    <li><a href="gallery.html" class="hover:text-blue-600">Portafolio</a></li>
-                    <li><a href="testimonial.html" class="hover:text-blue-600">Testimonios</a></li>
-                    <li><a href="./contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+           <div class="container mx-auto flex justify-between items-center h-14">
+           <!-- Logo -->
+           <a href="../index.html" class="flex items-center">
+               <img src="../assets/img/logosinfondo.png" alt="Inicio" class="w-14 h-14">
+           </a>
+
+           <!-- Menú hamburguesa -->
+           <div class="menu-toggle cursor-pointer  lg:hidden" id="menu-toggle">
+               <span class="block w-8 h-1 bg-gray-400 mb-1"></span>
+               <span class="block w-8 h-1 bg-gray-400 mb-1"></span>
+               <span class="block w-8 h-1 bg-gray-400"></span>
+           </div>
+
+           <!-- Menú principal -->
+           <ul id="menu" class="hidden lg:flex space-x-6 text-gray-400">
+               <li><a href="../index.html" class="hover:text-blue-600">Inicio</a></li>
+               <li><a href="profile.html" class="hover:text-blue-600">Sobre Mí</a></li>
+               <li><a href="skills.html" class="hover:text-blue-600">Habilidades</a></li>
+               <li><a href="gallery.html" class="hover:text-blue-600">Portafolio</a></li>
+               <li><a href="testimonial.html" class="hover:text-blue-600">Testimonios</a></li>
+               <li><a href="./contact.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contacto</a></li>
+           </ul>
+           </div>
+
+           <!-- Menú móvil -->
+           <ul id="mobile-menu" class="hidden background-color bg-opacity-80 shadow-lg absolute top-14 left-0 w-full">
+           <li><a href="../index.html" class="block px-4 py-2 hover:text-blue-600">Inicio</a></li>
+           <li><a href="profile.html" class="block px-4 py-2 hover:text-blue-600">Sobre Mí</a></li>
+           <li><a href="skills.html" class="block px-4 py-2 hover:text-blue-600">Habilidades</a></li>
+           <li><a href="gallery.html" class="block px-4 py-2 hover:text-blue-600">Portafolio</a></li>
+           <li><a href="testimonial.html" class="block px-4 py-2 hover:text-blue-600">Testimonios</a></li>
+           <li><a href="contact.html" class="block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Contacto</a></li>
+           </ul>
+
+       
+       </nav>
     
     <main class="container mx-auto px-4 mt-10">
         <h1 class="text-4xl font-bold text-center mb-8">Mis Habilidades</h1>
@@ -166,6 +188,20 @@
             });
         });
     </script>
+    <script>
+        // Funcionalidad del menú hamburguesa
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            let mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.classList.toggle("hidden");
+        });
+    
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll(".mobile-link").forEach(link => {
+            link.addEventListener("click", function() {
+                document.getElementById("mobile-menu").classList.add("hidden");
+            });
+        });
+      </script>
 </body>
 </html>
 
