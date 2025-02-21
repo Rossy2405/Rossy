@@ -1,0 +1,24 @@
+.menu {
+    display: none; /* Oculta el menú por defecto */
+}
+
+.menu-toggle {
+    cursor: pointer; /* Cambia el cursor al pasar sobre el menú hamburguesa */
+}
+
+.menu.active {
+    display: block; /* Muestra el menú cuando está activo */
+    position: absolute;
+    top: 60px; /* Ajusta según la altura del navbar */
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* Mostrar el menú al pasar el cursor */
+.menu-toggle:hover + .menu,
+.menu:hover {
+    display: block; /* Muestra el menú al pasar el cursor sobre el menú hamburguesa o el menú */
+}

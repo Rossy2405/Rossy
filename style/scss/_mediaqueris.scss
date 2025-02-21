@@ -27,8 +27,34 @@ body {
     .skill-card {
         margin-bottom: 15px; // Reduce el margen entre tarjetas
     }
+   
 }
+    .menu-toggle {
+    display: none; /* Oculta el botón de menú hamburguesa por defecto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el menú hamburguesa */
+    }
 
+/* Media query para pantallas más pequeñas */
+@media (max-width: 1080px) {
+    .menu-toggle {
+        display: none; /* Muestra el botón de menú hamburguesa en pantallas pequeñas */
+    }
+
+    #menu {
+        display: none; /* Oculta el menú principal en pantallas pequeñas */
+    }
+
+    .menu.active {
+        display: block; /* Muestra el menú cuando está activo */
+        position: absolute;
+        top: 60px; /* Ajusta según la altura del navbar */
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+    }
+}
 @media (max-width: 300px) {
     h1 {
         font-size: 1.8rem; // Tamaño de fuente aún más pequeño

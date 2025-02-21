@@ -9,10 +9,8 @@ body {
   background: #020c1b; /* Color oscuro para resaltar las partículas */
 }
 .rossy{
-  height: 50%;
+  height: 40%;
 }
-
-
 
 
 canvas {
