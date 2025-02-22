@@ -16,62 +16,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../style/css/style.css">
     <title>Mis Habilidades | Diseño Gráfico & Desarrollo Web - Rossy Martorell</title>
-    <style>
-        body {
-            background-image: url(/assets/img/fondoskill.jpg);
-            
-            color: #ffffff; /* Color de texto */
-            font-family: 'Libre Franklin', sans-serif;
-            padding-top: 0px; /* Espacio para el navbar fijo */
-        }
-
-        header {
-            position: top;
-            width: 100%;
-            z-index: 1000;
-        }
-
-        nav {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        h1 {
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: fadeIn 0.5s forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .skill-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-            backdrop-filter: blur(10px); /* Efecto Glassmorphism */
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    
 </head>
 <body>
     <header>
@@ -102,7 +47,7 @@
            </div>
 
            <!-- Menú móvil -->
-           <ul id="mobile-menu" class="hidden background-color bg-opacity-80 shadow-lg absolute top-14 left-0 w-full">
+           <ul id="mobile-menu" class="hidden bg-blue-900 gibg-opacity-30 shadow-lg absolute top-14 left-0 w-full	z-50 ">
            <li><a href="../index.html" class="block px-4 py-2 hover:text-blue-600">Inicio</a></li>
            <li><a href="profile.html" class="block px-4 py-2 hover:text-blue-600">Sobre Mí</a></li>
            <li><a href="skills.html" class="block px-4 py-2 hover:text-blue-600">Habilidades</a></li>

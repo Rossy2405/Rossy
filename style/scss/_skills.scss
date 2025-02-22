@@ -1,50 +1,55 @@
-
 body {
-    font-family: 'Poppins', sans-serif;
+    background-image: url(/assets/img/fondoskill.jpg);
     
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a2e;
-    color: #eaeaea;
-    text-align: center;
+    color: #ffffff; /* Color de texto */
+    font-family: 'Libre Franklin', sans-serif;
+    padding-top: 0px; /* Espacio para el navbar fijo */
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
+header {
+    position: top;
+    width: 100%;
+    z-index: 1000;
 }
 
-/* Tarjetas */
-.card {
+nav {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    
-    &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-    }
-}
-
-h1, h2 {
-    color: #00aaff;
-}
-
-/* Animación personalizada */
-@keyframes glitch {
-    0% { text-shadow: 2px 2px #00ffff, -2px -2px #ff00ff; }
-    50% { text-shadow: -2px -2px #00ffff, 2px 2px #ff00ff; }
-    100% { text-shadow: 2px -2px #00ffff, -2px 2px #ff00ff; }
 }
 
 h1 {
-    animation: glitch 0.5s infinite alternate;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s forwards;
 }
 
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    backdrop-filter: blur(10px); /* Efecto Glassmorphism */
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
 
