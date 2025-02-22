@@ -1,39 +1,68 @@
 
-.testimonials-container {
-    text-align: center;
-    padding: 40px;
-    background-color: #16213e;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
-    color: white;
+.backgraund-color {
+    color: #030020;
+    
 }
+.testimonials-container {
+    background: linear-gradient(135deg, #1e1e1e, #333);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials-container h2 {
+    font-family: "Maitree", serif;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 .testimonials {
     display: flex;
     flex-wrap: wrap;
-    justify-content: inline;
+    justify-content: center;
     gap: 20px;
 }
+
 .testimonial-card {
-    background: #0f3460;
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 170, 255, 0.2);
-    display: flex;
-    align-items: inline;
-    width: 300px;
+    padding: 20px;
+    max-width: 350px;
     text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
 .testimonial-card img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    margin-right: 15px;
-    border: 3px solid #00aaff;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.3);
 }
+
 .testimonial-content {
-    flex: 1;
+    margin-top: 15px;
 }
+
+.testimonial-content p {
+    font-size: 1rem;
+    font-family: "Libre Franklin", sans-serif;
+    color: #030020;
+    line-height: 1.6;
+    font-style: italic;
+}
+
 .testimonial-name {
+    display: block;
+    font-size: 0.9rem;
     font-weight: bold;
-    color: #00aaff;
+    color: #fff;
+    margin-top: 10px;
 }
